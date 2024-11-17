@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthConnect Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="health.js"></script>
+</head>
+<body>
+    <div id="registrationForm">
+        <h2>Register on HealthConnect</h2>
+        
+        <!-- Select Role -->
+        <label for="userRole">Register as:</label>
+        <select id="userRole" onchange="showFields()">
+            <option value="">-- Select Role --</option>
+            <option value="patient">Patient</option>
+            <option value="median">Median</option>
+            <option value="doctor">Doctor</option>
+        </select>
+
+        <!-- Patient Fields -->
+        <div id="patientFields" style="display: none;">
+            <h3>Patient Registration</h3>
+            <label>Age: <input type="number" id="patientAge" required></label><br>
+            <label>Gender:
+                <select id="patientGender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </label><br>
+            <label>Problem Description: <input type="text" id="patientProblem" required></label><br>
+            <label>Problem Duration (in days): <input type="number" id="problemDuration" required></label><br>
+            <label>Payment Amount:(>500) <input type="number" id="patientPayment" required></label>
+        </div>
+
+        <!-- Median Fields -->
+      <!-- Median Fields -->
+<div id="medianFields" style="display: none;">
+    <h3>Median Registration</h3>
+    <label>Educational Details: <input type="text" id="medianEducation" required placeholder="e.g., B.Sc Nursing, BUMS"></label><br>
+    
+    <label>Location: <input type="text" id="medianLocation" required placeholder="Enter your location"></label><br>
+    
+    <label>Do you own a laptop?
+        <select id="medianLaptopOwnership">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    </label><br>
+    
+    <label>Subscription Type:
+        <select id="medianSubscription">
+            <option value="monthly">Monthly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+    </label><br>
+    
+    <label>Payment Amount: <input type="number" id="medianPayment" value="500" readonly></label>
+</div>
+
+
+        <!-- Doctor Fields -->
+        <div id="doctorFields" style="display: none;">
+            <h3>Doctor Registration</h3>
+            <label>Degree:
+                <select id="doctorDegree">
+                    <option value="mbbs">MBBS</option>
+                    <option value="ms">MS</option>
+                </select>
+            </label><br>
+            <label>Subscription Type:
+                <select id="doctorSubscription">
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+            </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button onclick="calculatePayment()">Submit Registration</button>
+
+        <!-- Payment Calculation Result -->
+        <div id="paymentCalculation" style="display: none;">
+            <h3>Payment Summary</h3>
+            <p id="summaryText"></p>
+        </div>
+    </div>
+    <link rel="stylesheet" href="healt.css">
+    <script src="scripth-health.js"></script>
+</body>
+</html>

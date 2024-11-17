@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#registrationForm {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#paymentCalculation {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
